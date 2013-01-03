@@ -1,7 +1,4 @@
 #!/usr/bin/env ruby -w
-
-$: << File.join(File.dirname(__FILE__), "..", "lib")
-
-require "menulator"
+require_relative "../lib/menulator"
 
 Menulator.cli
