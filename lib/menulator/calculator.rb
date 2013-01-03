@@ -12,15 +12,15 @@ module Menulator
       @combinations.collect {|combination| combination.sort}.uniq
     end
 
-    def calculate_combinations(sum_total = 0, possible_combination = [])
-      @items.inject(sum_total) do |current_total, item|
-        current_sum = current_total + item[:price]
-        if(current_sum == @target_price)
-          @combinations << possible_combination + [item[:title]]
-        elsif (current_sum < @target_price)
-          calculate_combinations(current_sum, possible_combination + [item[:title]])
+    def calculate_combinations(previous_sum = 0, combination = [])
+      @items.each do |item|
+        current_sum = previous_sum + item[:price]
+        current_combination = combination + [item[:title]]
+        if(current_sum == target_price)
+          @combinations << current_combination
+        elsif (current_sum < target_price)
+          calculate_combinations(current_sum, current_combination)
         end
-        current_total
       end
     end
   end
