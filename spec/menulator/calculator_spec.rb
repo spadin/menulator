@@ -15,8 +15,6 @@ module Menulator
         total = combination.inject(0) do |sum, item|
           sum += @calculator.find_price(item)
         end
-
-        puts "Items #{combination} #{total}"
       end
     end
   end

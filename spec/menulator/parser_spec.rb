@@ -11,7 +11,7 @@ module Menulator
       @parser.text.should_not == ""
     end
 
-    it "should parse the menu file as " do
+    it "should parse the menu file" do
       menu_data = @parser.parse
       menu_data[:target_price].should == 15.05
     end
