@@ -8,7 +8,7 @@ module Menulator
         
         banner <<-EOF.strip_heredoc
         menulator takes a menu and calculates every combination of menu items
-        possible given a target price."
+        possible given a target price.
         
         Usage:
           menulator [--target-price 15.05] [--file #{default_file}]
