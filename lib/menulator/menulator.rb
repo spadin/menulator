@@ -8,38 +8,4 @@ module Menulator
     calculator.calculate_combinations
     calculator.combinations
   end
-
-  def self.cli
-    default_file = "menu.txt"
-
-    opts = Trollop::options do
-      version "menulator 0.0.1 (c) 2013 Sandro Padin"
-      
-      banner "menulator takes a menu and calculates every combination of menu items"
-      banner "possible given a target price."
-      banner ""
-      banner "Usage:"
-      banner "  menulator [--target-price 15.05] [--file ./test/data/menu.txt]"
-      banner ""
-      banner "where [options] are:"
-
-      opt :file, "Menu file path", :default => default_file
-      opt :target_price, "Target price for combination", :type => Float
-    end
-
-    file = opts[:file]
-    target_price = opts[:target_price]
-    path = File.expand_path(File.join(file))
-
-    combinations = Menulator.combinations(path, target_price)
-
-    if combinations.empty?
-      puts "No possble combinations"
-    else
-      puts "Possible combinations:"
-      combinations.each_with_index do |combination, index|
-        puts "\t#{index+1}) #{combination.join(", ")}"
-      end
-    end
-  end
 end
