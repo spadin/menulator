@@ -23,11 +23,8 @@ module Menulator
 
     def self.run!
       opts = Menulator::CLI.setup
-      file = opts[:file]
-      target_price = opts[:target_price]
-      path = File.expand_path(File.join(file))
-
-      combinations = Menulator.combinations(path, target_price)
+      file, target_price = opts.values_at(:file, :target_price)
+      combinations = Menulator.combinations(file, target_price)
 
       if combinations.empty?
         puts "No possble combinations"
