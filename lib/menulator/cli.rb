@@ -41,9 +41,11 @@ module Menulator
   end
 end
 
+# Borrowed from:
+# https://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/string/strip.rb
 class String
   def strip_heredoc
-    indent = scan(/^[ \t]*(?=\S)/).min.send(:size) || 0
+    indent = scan(/^[ \t]*(?=\S)/).min.size || 0
     gsub(/^[ \t]{#{indent}}/, '')
   end
 end
