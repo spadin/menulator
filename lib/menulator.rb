@@ -3,3 +3,4 @@ $: << File.dirname(__FILE__)
 
 require "menulator/parser"
 require "menulator/calculator"
+require "menulator/menulator"

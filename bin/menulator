@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby -w
+
+$: << File.join(File.dirname(__FILE__), "..")
+
+require 'lib/menulator'
+
+file = "text/data/menu.txt"
+target_price = nil
+unless ARGV.empty?
+  file = ARGV[0] 
+  if ARGV.size > 1
+    target_price = Float(ARGV[1])
+  end
+end
+path = File.expand_path(File.join(file))
+
+combinations = Menulator.combinations(path, target_price)
+puts "Combinations: #{combinations}"
