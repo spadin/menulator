@@ -9,7 +9,7 @@ module Menulator
     end
 
     def combinations
-      @combinations.map {|combination| combination.sort}.uniq
+      @combinations.collect {|combination| combination.sort}.uniq
     end
 
     def calculate_combinations(sum_total = 0, possible_combination = [])

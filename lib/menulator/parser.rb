@@ -17,10 +17,10 @@ module Menulator
         if idx == 0
           menu_data[:target_price] = Float(line.gsub("$",""))
         else
-          lineitem = line.split(",$")
+          title, price = line.split(",$")
           menu_data[:items] << {
-            :title => lineitem[0],
-            :price => Float(lineitem[1])
+            :title => title,
+            :price => Float(price)
           }
         end
       end
