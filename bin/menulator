@@ -10,7 +10,7 @@ default_file = "./test/data/menu.txt"
 opts = Trollop::options do
   version "menulator 0.0.1 (c) 2013 Sandro Padin"
   
-  banner "Menulator is a simple program that calculates all possible"
+  banner "menulator is a simple program that calculates all possible"
   banner "combination of items from a menu that can be chosen at a"
   banner "target price."
   banner ""
