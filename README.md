@@ -1,6 +1,6 @@
 # menulator
 
-menulator takes a menu and calculates every combination of menu items banner 
+menulator takes a menu and calculates every combination of menu items
 possible given a target price.
 
 ## Usage:
