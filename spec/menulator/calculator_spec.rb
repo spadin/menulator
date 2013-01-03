@@ -1,4 +1,4 @@
-require 'menulator'
+require 'spec_helper'
 
 module Menulator
   describe Calculator do

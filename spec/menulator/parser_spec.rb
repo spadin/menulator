@@ -1,4 +1,4 @@
-require 'menulator'
+require 'spec_helper'
 
 TEST_DATA =<<-EOS
 $15.05

@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 module Menulator
   describe Menulator do
     describe "#combinations" do
