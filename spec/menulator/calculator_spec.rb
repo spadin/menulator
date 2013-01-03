@@ -8,11 +8,8 @@ module Menulator
     end
 
     def find_price(title)
-      items = @menu_data[:items]
-      i = items.find do |item|
-        item[:title] == title
-      end
-      i[:price]
+      item = @menu_data[:items].find {|item| item[:title] == title}
+      item[:price]
     end
 
     it "should determine possible combinations to reach target price" do
