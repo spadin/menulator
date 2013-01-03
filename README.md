@@ -16,6 +16,7 @@ The following menu format is expected.
 * Item name and item price must be comma-delimited
 * No whitespace on either side of the delimiter.
 
+
     $15.05
     mixed fruit,$2.15
     french fries,$2.75
@@ -23,6 +24,7 @@ The following menu format is expected.
     hot wings,$3.55
     mozzarella sticks,$4.20
     sampler plate,$5.80
+
 
 ## Running Specs
 
