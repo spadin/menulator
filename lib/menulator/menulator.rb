@@ -15,9 +15,8 @@ module Menulator
     opts = Trollop::options do
       version "menulator 0.0.1 (c) 2013 Sandro Padin"
       
-      banner "menulator is a simple program that calculates all possible"
-      banner "combination of items from a menu that can be chosen at a"
-      banner "target price."
+      banner "menulator takes a menu and calculates every combination of menu items"
+      banner "possible given a target price."
       banner ""
       banner "Usage:"
       banner "  menulator [--target-price 15.05] [--file ./test/data/menu.txt]"
