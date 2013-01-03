@@ -1,10 +1,20 @@
 require 'menulator'
 
+TEST_DATA =<<-EOS
+$15.05
+mixed fruit,$2.15
+french fries,$2.75
+side salad,$3.35
+hot wings,$3.55
+mozzarella sticks,$4.20
+sampler plate,$5.80
+EOS
+
 module Menulator
   describe Parser do
     before do
-      @path = File.join("test","data","menu.txt")
-      @parser = Parser.new(@path)
+      Parser.any_instance.stub(:read).and_return(TEST_DATA)
+      @parser = Parser.new("menu.txt")
     end
 
     it "should load a menu file" do

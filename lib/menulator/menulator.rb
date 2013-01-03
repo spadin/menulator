@@ -10,7 +10,7 @@ module Menulator
   end
 
   def self.cli
-    default_file = "./test/data/menu.txt"
+    default_file = "menu.txt"
 
     opts = Trollop::options do
       version "menulator 0.0.1 (c) 2013 Sandro Padin"

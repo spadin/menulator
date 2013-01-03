@@ -3,8 +3,7 @@ require 'menulator'
 module Menulator
   describe Calculator do
     before do
-      path = File.join("test","data","menu.txt")
-      menu_data = Parser.menu_data(path)
+      menu_data = Parser.menu_data("menu.txt")
       @calculator = Calculator.new(menu_data)
     end
 
@@ -15,6 +14,7 @@ module Menulator
         total = combination.inject(0) do |sum, item|
           sum += @calculator.find_price(item)
         end
+        expect(total).to eq(@calculator.target_price)
       end
     end
   end

@@ -1,6 +1,6 @@
 module Menulator
   class Calculator
-    attr_writer :target_price
+    attr_accessor :target_price
 
     def initialize(menu_data)
       @items = menu_data[:items]
