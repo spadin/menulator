@@ -23,12 +23,5 @@ module Menulator
         current_total
       end
     end
-
-    def find_price(title)
-      i = @items.find do |item|
-        item[:title] == title
-      end
-      i[:price]
-    end
   end
 end
