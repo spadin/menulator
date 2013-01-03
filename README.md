@@ -1,5 +1,12 @@
 # menulator
 
+<a href="http://travis-ci.org/spadin/menulator">
+  <img src="https://secure.travis-ci.org/spadin/menulator.png?branch=master" />
+</a> 
+<a href="https://codeclimate.com/github/spadin/menulator">
+  <img src="https://codeclimate.com/badge.png" />
+</a>
+
 menulator takes a menu and calculates every combination of menu items
 possible given a target price.
 
